@@ -67,7 +67,7 @@ def detect(save_img=False):
 
     # Get names and colors
     names = load_classes(names)
-    colors = (255, 0, 0) for _ in range(len(names))
+    colors = [(255, 0, 0)]
 
     # Run inference
     t0 = time.time()
