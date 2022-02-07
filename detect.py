@@ -67,8 +67,9 @@ def detect(save_img=False):
 
     # Get names and colors
     names = load_classes(names)
-    colors = 255 for _ in range(len(names))
-    
+   # colors = [[random.randint(0, 255) for _ in range(3)] for _ in range(len(names))]
+    colors = [[(255) for _ in range(3)] for _ in range(len(names))]
+
     # Run inference
     t0 = time.time()
     img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
